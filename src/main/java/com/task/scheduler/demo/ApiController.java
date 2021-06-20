@@ -38,8 +38,7 @@ public TestEvent intiatetest(@RequestBody  TestEvent testEvent){
 
         taskSchedulerServices.stoptask(testEvent);
 
-        return "." +
-                "" ;
+        return "Completed ";
     }
 
 
