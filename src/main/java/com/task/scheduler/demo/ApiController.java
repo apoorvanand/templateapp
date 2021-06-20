@@ -33,7 +33,14 @@ public TestEvent intiatetest(@RequestBody  TestEvent testEvent){
 
         return "updated" ;
     }
+    @RequestMapping(value = "/stopcapture" ,method = RequestMethod.PUT, consumes = "application/json")
+    public String Stoptask(@RequestBody  TestEvent testEvent){
 
+        taskSchedulerServices.stoptask(testEvent);
+
+        return "." +
+                "" ;
+    }
 
 
 

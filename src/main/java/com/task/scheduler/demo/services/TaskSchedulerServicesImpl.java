@@ -20,4 +20,9 @@ testschedular.insertest(testEvent);
     public void updatetaskstatus(TestEvent testEvent) {
         testschedular.updatetaskstatus(testEvent);
     }
+
+    @Override
+    public void stoptask(TestEvent testEvent) {
+        testschedular.stoptask(testEvent);
+    }
 }

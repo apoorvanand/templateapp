@@ -47,5 +47,14 @@ public class TestScheduleImpl implements TestSchedulerDao {
 
     }
 
+    @Override
+    public void stoptask(TestEvent testEvent) {
+        final String sql="update public.tasks set next_poll_time =:next_poll_time ,end_time=:end_time,status =:status where taskid=:taskid ";
+        KeyHolder holder = new GeneratedKeyHolder();
+        SqlParameterSource param =new MapSqlParameterSource().addValue("status","completed").addValue("next_poll_time",testEvent.getEnd_time()).addValue("taskid",testEvent.getTaskid()).addValue("end_time",testEvent.getEnd_time());
+        template.update(sql,param,holder);
+
+    }
+
 
 }

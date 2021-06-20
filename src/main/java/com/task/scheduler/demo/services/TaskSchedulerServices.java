@@ -9,4 +9,5 @@ public interface TaskSchedulerServices {
     @Autowired
     void inserttask(TestEvent testEvent);
     void updatetaskstatus(TestEvent testEvent);
+    void stoptask(TestEvent testEvent);
 }

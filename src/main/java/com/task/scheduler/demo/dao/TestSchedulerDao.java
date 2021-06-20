@@ -9,6 +9,6 @@ public interface TestSchedulerDao {
 
     void insertest(TestEvent testEvent);
     void updatetaskstatus(TestEvent testEvent);
-
+ void stoptask(TestEvent testEvent);
 
 }
